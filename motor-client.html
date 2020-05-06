@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <style> button { font-size: 30px; border-radius: 6px; }</style>
+    <title>Motor-Client</title>
+</head>
+<body style="text-align: center; font-size: 30px;">
+    <script>
+        function send(cmd) {$.get(cmd); $('#msg').html(cmd);}
+    </script>
+    <p>
+        <button onclick="send('forward')">↑</button><br>
+        <button onclick="send('left')">←</button>
+        <button onclick="send('stop')">□</button>
+        <button onclick="send('right')">→</button><br>
+        <button onclick="send('back')">↓</button><br>
+        <p id="msg"></p>
+    </p>
+</body>
+</html>
